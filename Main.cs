@@ -8,6 +8,7 @@ namespace ISM3025
     {
         internal static ILog HBSLog;
         internal static ModSettings Settings;
+        internal static string ModDir;
 
         public static void Init(string modDir, string settings)
         {
@@ -16,6 +17,7 @@ namespace ISM3025
 
             HBSLog = Logger.GetLogger("ISM3025");
             Settings = ModSettings.Parse(settings);
+            ModDir = modDir;
         }
     }
 }

@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\SquareMap.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="ModSettings.cs" />
     <Compile Include="Patches\StarmapRenderer.cs" />
@@ -52,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patches\StarmapSystemRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\DynamicLogos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\FactionColors.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

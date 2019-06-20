@@ -16,8 +16,10 @@ namespace ISM3025
         public float MaxFov = 100f;
 
         public float StarHitboxSize = 1.5f;
+        public float BorderMargin = 5f;
 
         public Dictionary<string, float[]> FactionColors = new Dictionary<string, float[]>();
+        public Dictionary<string, string> FactionLogoPaths = new Dictionary<string, string>();
 
         public static ModSettings Parse(string json)
         {
