@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using BattleTech;
-using Harmony;
 using UnityEngine;
 
 // ReSharper disable AccessToStaticMemberViaDerivedType
@@ -25,7 +24,6 @@ namespace ISM3025.Features
 
         public static void PlaceLogos(StarmapRenderer renderer)
         {
-            var rendererTraverse = Traverse.Create(renderer);
             var factions = Enum.GetValues(typeof(Faction));
             var logos = new Dictionary<Faction, GameObject>();
 
@@ -84,21 +82,21 @@ namespace ISM3025.Features
                 if (!logos.ContainsKey(faction))
                     continue;
 
-                BoundingRect mapData;
+                BoundingRect boundingRect;
                 if (boundingRects.ContainsKey(faction))
                 {
-                    mapData = boundingRects[faction];
+                    boundingRect = boundingRects[faction];
                 }
                 else
                 {
-                    mapData = new BoundingRect();
-                    boundingRects.Add(faction, mapData);
+                    boundingRect = new BoundingRect();
+                    boundingRects.Add(faction, boundingRect);
                 }
 
-                mapData.MinX = Mathf.Min(mapData.MinX, starNode.NormalizedPosition.x);
-                mapData.MaxX = Mathf.Max(mapData.MaxX, starNode.NormalizedPosition.x);
-                mapData.MinY = Mathf.Min(mapData.MinY, starNode.NormalizedPosition.y);
-                mapData.MaxY = Mathf.Max(mapData.MaxY, starNode.NormalizedPosition.y);
+                boundingRect.MinX = Mathf.Min(boundingRect.MinX, starNode.NormalizedPosition.x);
+                boundingRect.MaxX = Mathf.Max(boundingRect.MaxX, starNode.NormalizedPosition.x);
+                boundingRect.MinY = Mathf.Min(boundingRect.MinY, starNode.NormalizedPosition.y);
+                boundingRect.MaxY = Mathf.Max(boundingRect.MaxY, starNode.NormalizedPosition.y);
             }
 
             foreach (var faction in logos.Keys)

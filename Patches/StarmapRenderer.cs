@@ -18,6 +18,18 @@ namespace ISM3025.Patches
         }
     }
 
+    /// <summary>
+    /// Skip all place logo calls, we use our own algorithm
+    /// </summary>
+    [HarmonyPatch(typeof(StarmapRenderer), "PlaceLogo")]
+    public static class StarmapRenderer_PlaceLogo_Patch
+    {
+        public static bool Prefix()
+        {
+            return false;
+        }
+    }
+
     [HarmonyPatch(typeof(StarmapRenderer), "FactionColor")]
     public static class StarmapRenderer_FactionColor_Patch
     {
