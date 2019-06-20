@@ -14,11 +14,11 @@ namespace ISM3025.Features
         {
             { "Davion", "davionLogo" },
             { "Marik", "marikLogo" },
-            { "AuriganDirectorate", "directorateLogo" },
             { "Liao", "liaoLogo" },
             { "TaurianConcordat", "taurianLogo" },
             { "MagistracyOfCanopus", "magistracyLogo" },
-            { "AuriganRestoration", "restorationLogo" },
+            { "AuriganDirectorate", "directorateLogo" },
+            { "AuriganRestoration", "restorationLogo" }
 
         };
 
