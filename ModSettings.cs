@@ -12,6 +12,9 @@ namespace ISM3025
         public float MapWidth = 100f;
         public float MapHeight = 100f;
 
+        public float MapMargin = 25f;
+        public float MapBottomMargin = 75f;
+
         public float MinFov = 15f;
         public float MaxFov = 100f;
 
