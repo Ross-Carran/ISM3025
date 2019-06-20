@@ -17,6 +17,8 @@ namespace ISM3025
 
         public float StarHitboxSize = 1.5f;
         public float BorderMargin = 5f;
+        public float LogoScalar = 0.75f;
+        public float LogoMaxSize = 50f;
 
         public Dictionary<string, float[]> FactionColors = new Dictionary<string, float[]>();
         public Dictionary<string, string> FactionLogoPaths = new Dictionary<string, string>();
