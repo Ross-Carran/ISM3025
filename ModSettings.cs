@@ -20,6 +20,8 @@ namespace ISM3025
         public float LogoScalar = 0.75f;
         public float LogoMaxSize = 50f;
 
+        public string NavRoomScreenTexturePath = "";
+
         public Dictionary<string, float[]> FactionColors = new Dictionary<string, float[]>();
         public Dictionary<string, string> FactionLogoPaths = new Dictionary<string, string>();
 

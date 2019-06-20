@@ -19,7 +19,6 @@ namespace ISM3025.Features
             { "MagistracyOfCanopus", "magistracyLogo" },
             { "AuriganDirectorate", "directorateLogo" },
             { "AuriganRestoration", "restorationLogo" }
-
         };
 
         public static void PlaceLogos(StarmapRenderer renderer)
