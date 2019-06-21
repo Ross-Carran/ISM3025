@@ -10,16 +10,16 @@ namespace ISM3025
     internal class ModSettings
     {
         // TODO: add feature to not resize in campaign
-        public float MapWidth = 100f;
-        public float MapHeight = 100f;
+        public float MapWidth = 200f;
+        public float MapHeight = 200f;
 
-        public float MapMargin = 25f;
-        public float MapBottomMargin = 75f;
+        public float MapMargin = 50f;
+        public float MapBottomMargin = 100f;
 
-        public float MinFov = 15f;
-        public float MaxFov = 100f;
+        public float MinFov = 20f;
+        public float MaxFov = 125f;
 
-        public float StarHitboxSize = 1.5f;
+        public float StarHitboxSize = 2f;
         public float BorderMargin = 5f;
         public float LogoScalar = 0.75f;
         public float LogoMaxSize = 50f;
