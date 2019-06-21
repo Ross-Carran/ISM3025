@@ -29,6 +29,10 @@ namespace ISM3025
         public Dictionary<string, float[]> FactionColors = new Dictionary<string, float[]>();
         public Dictionary<string, string> FactionLogoPaths = new Dictionary<string, string>();
 
+        public string GenerateShopsTag = "mod_generate_shops";
+        public List<string> GenerateShopsIgnoreTags = new List<string>();
+        public Dictionary<string, string> TagToShopItemCollection = new Dictionary<string, string>();
+
         public static ModSettings Parse(string json)
         {
             ModSettings settings;

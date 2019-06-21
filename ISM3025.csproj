@@ -46,10 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\ResizableMap.cs" />
+    <Compile Include="Features\ShopGeneration.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="ModSettings.cs" />
     <Compile Include="Patches\SGRoomManager.cs" />
     <Compile Include="Patches\StarmapRenderer.cs" />
+    <Compile Include="Patches\SimGameState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
