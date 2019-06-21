@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ISM3025.Features
 {
-    public static class SquareMap
+    public static class ResizableMap
     {
         public static void OnMapRefresh(StarmapRenderer renderer)
         {

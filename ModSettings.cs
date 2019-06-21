@@ -9,6 +9,7 @@ namespace ISM3025
 {
     internal class ModSettings
     {
+        // TODO: add feature to not resize in campaign
         public float MapWidth = 100f;
         public float MapHeight = 100f;
 

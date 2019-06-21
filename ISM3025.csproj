@@ -45,7 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\SquareMap.cs" />
+    <Compile Include="Features\ResizableMap.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="ModSettings.cs" />
     <Compile Include="Patches\SGRoomManager.cs" />

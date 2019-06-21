@@ -17,7 +17,7 @@ namespace ISM3025.Patches
         public static void Postfix(StarmapRenderer __instance)
         {
             DynamicLogos.PlaceLogos(__instance);
-            SquareMap.OnMapRefresh(__instance);
+            ResizableMap.OnMapRefresh(__instance);
         }
     }
 
@@ -41,7 +41,7 @@ namespace ISM3025.Patches
         // ReSharper disable once RedundantAssignment
         public static bool Prefix(Vector2 normalizedPos, ref Vector3 __result)
         {
-            var squareMapSpace = SquareMap.NormalizeToSquareMapSpace(normalizedPos);
+            var squareMapSpace = ResizableMap.NormalizeToSquareMapSpace(normalizedPos);
             if (squareMapSpace == null)
                 return true;
 
@@ -78,6 +78,7 @@ namespace ISM3025.Patches
             var zPos = __instance.starmapCamera.transform.position.z;
             var fov = __instance.starmapCamera.fieldOfView;
 
+            // TODO: move to ResizableMap feature
             var xView = GetViewSize(Mathf.Abs(zPos), GetHorizontalFov(fov));
             var yView = GetViewSize(Mathf.Abs(zPos), fov);
 
