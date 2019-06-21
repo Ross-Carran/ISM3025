@@ -65,5 +65,39 @@ namespace ISM3025.Features
 
             return mapSpacePosition;
         }
+
+
+        public static Vector3 ClampCameraPosition(Vector3 cameraPosition, float fov, float zPos)
+        {
+            var clamped = cameraPosition;
+            var xView = GetViewSize(Mathf.Abs(zPos), GetHorizontalFov(fov));
+            var yView = GetViewSize(Mathf.Abs(zPos), fov);
+
+            var totalWidth = Main.Settings.MapWidth * 2f + 2f * Main.Settings.MapMargin;
+            var totalHeight = Main.Settings.MapHeight * 2f + Main.Settings.MapMargin + Main.Settings.MapBottomMargin;
+
+            var leftBoundary = -Main.Settings.MapWidth - Main.Settings.MapMargin + xView;
+            var rightBoundary = Main.Settings.MapWidth + Main.Settings.MapMargin - xView;
+            var bottomBoundary = -Main.Settings.MapHeight - Main.Settings.MapBottomMargin + yView;
+            var topBoundary = Main.Settings.MapHeight + Main.Settings.MapMargin - yView;
+
+            clamped.x = xView * 2f >= totalWidth ? 0
+                : Mathf.Clamp(cameraPosition.x, leftBoundary, rightBoundary);
+
+            clamped.y = yView * 2f >= totalHeight ? 0
+                : Mathf.Clamp(cameraPosition.y, bottomBoundary, topBoundary);
+
+            return clamped;
+        }
+
+        private static float GetViewSize(float zPos, float fov)
+        {
+            return zPos * Mathf.Tan(fov * Mathf.Deg2Rad / 2.0f);
+        }
+
+        private static float GetHorizontalFov(float verticalFov)
+        {
+            return 2.0f * Mathf.Atan((16f/9f) * Mathf.Tan(verticalFov * Mathf.Deg2Rad / 2.0f)) * Mathf.Rad2Deg;
+        }
     }
 }
