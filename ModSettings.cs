@@ -19,6 +19,9 @@ namespace ISM3025
         public float MinFov = 20f;
         public float MaxFov = 125f;
 
+        public bool UseSmoothZoom = true;
+        public float SmoothZoomTime = 0.15f;
+
         public float StarHitboxSize = 2f;
         public float BorderMargin = 5f;
         public float LogoScalar = 0.75f;

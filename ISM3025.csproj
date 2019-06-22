@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Features\ResizableMap.cs" />
     <Compile Include="Features\ShopGeneration.cs" />
+    <Compile Include="Features\SmoothZoom.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="ModSettings.cs" />
     <Compile Include="Patches\SGRoomManager.cs" />

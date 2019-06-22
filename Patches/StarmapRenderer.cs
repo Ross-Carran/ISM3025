@@ -69,8 +69,16 @@ namespace ISM3025.Patches
             return instructionList;
         }
 
+        public static void Prefix(StarmapRenderer __instance)
+        {
+            SmoothZoom.PreUpdate(__instance);
+        }
+
         public static void Postfix(StarmapRenderer __instance)
         {
+            SmoothZoom.PostUpdate(__instance);
+
+            // clamp camera position
             var cameraPosition = __instance.starmapCamera.transform.position;
             var fov = __instance.starmapCamera.fieldOfView;
             var zPos = __instance.starmapCamera.transform.position.z;

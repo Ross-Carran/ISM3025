@@ -13,12 +13,15 @@
         "MinFov": 20,
         "MaxFov": 125,
 
+        "UseSmoothZoom": true,
+        "SmoothZoomTime": 0.15,
+
         "StarHitboxSize": 2,
         "BorderMargin": 5,
 
         "FactionColors": {
-            "Kurita": [0.863, 0.078, 0.235, 1],
-            "Steiner": [0.255, 0.412, 0.882, 1]
+            "Kurita": [ 0.863, 0.078, 0.235, 1 ],
+            "Steiner": [ 0.255, 0.412, 0.882, 1 ]
         },
 
         "LogoScalar": 0.75,

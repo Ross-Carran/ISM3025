@@ -66,7 +66,6 @@ namespace ISM3025.Features
             return mapSpacePosition;
         }
 
-
         public static Vector3 ClampCameraPosition(Vector3 cameraPosition, float fov, float zPos)
         {
             var clamped = cameraPosition;
