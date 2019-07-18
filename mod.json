@@ -36,7 +36,8 @@
         "GenerateShopsTag": "mod_generate_shops",
         "GenerateShopsIgnoreTags": [
             "planet_pop_none",
-            "planet_civ_primitive"
+            "planet_civ_primitive",
+			"planet_faction_nofaction"
         ],
         "TagToShopItemCollection": {
             "planet_faction_steiner": "itemCollection_minor_Steiner",
