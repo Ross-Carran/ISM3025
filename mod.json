@@ -13,6 +13,7 @@
         "MinFov": 20,
         "MaxFov": 125,
 
+
         "UseSmoothZoom": true,
         "SmoothZoomTime": 0.15,
 

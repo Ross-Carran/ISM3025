@@ -9,6 +9,22 @@ namespace ISM3025.Features
     {
         public static void TryAddItemCollections(StarSystemDef def)
         {
+            // Need to tag all systems for opening up the systems after campaign is done
+            bool ProgressTag = false;
+            foreach (string tag in def.Tags)
+            {
+                if (tag.StartsWith("planet_progress"))
+                    ProgressTag = true;
+            }
+            if (!ProgressTag)
+                def.Tags.Add("planet_progress_3");
+            else
+                return;
+
+            //var sim = UnityGameInstance.BattleTechGame.Simulation;
+            //if (sim.IsCampaign && !sim.CompanyTags.Contains("map_travel_3"))
+            //    return;
+
             // only add to systems with this tag if it exists
             var enableTag = Main.Settings.GenerateShopsTag;
             if (!string.IsNullOrEmpty(enableTag) && !def.Tags.Contains(enableTag))
