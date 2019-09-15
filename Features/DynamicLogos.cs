@@ -60,7 +60,7 @@ namespace ISM3025.Features
 
                     // from https://answers.unity.com/questions/432655/loading-texture-file-from-pngjpg-file-on-disk.html
                     var texture2d = new Texture2D(2, 2);
-                    //texture2d.LoadImage(File.ReadAllBytes(path));
+                    texture2d.LoadImage(File.ReadAllBytes(path));
 
                     logo.GetComponent<Renderer>().material.mainTexture = texture2d;
                 }
