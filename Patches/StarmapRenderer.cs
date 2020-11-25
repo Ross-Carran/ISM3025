@@ -21,7 +21,7 @@ namespace ISM3025.Patches
         }
     }
 
-    [HarmonyPatch(typeof(StarmapRenderer), "FactionColor")]
+   /* [HarmonyPatch(typeof(StarmapRenderer), "FactionColor")]
     public static class StarmapRenderer_FactionColor_Patch
     {
         public static bool Prefix(ref Color __result, Faction thisFaction)
@@ -33,7 +33,7 @@ namespace ISM3025.Patches
             __result = color.Value;
             return false;
         }
-    }
+    }*/
 
     [HarmonyPatch(typeof(StarmapRenderer), "NormalizeToMapSpace")]
     public static class StarmapRenderer_NormalizeToMapSpace_Patch

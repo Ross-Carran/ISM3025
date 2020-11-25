@@ -77,7 +77,7 @@ namespace ISM3025.Features
 
             foreach (var starNode in renderer.starmap.VisisbleSystem)
             {
-                var faction = starNode.System.Owner;
+                var faction = starNode.System.Def.Owner;
                 if (!logos.ContainsKey(faction))
                     continue;
 
